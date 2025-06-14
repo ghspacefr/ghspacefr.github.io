@@ -4,12 +4,33 @@
 {% block content %}
 <article>
 	<h3>CONTACT</h3>
-	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Proin tortor purus platea sit eu id nisi litora libero. Neque vulputate consequat ac amet augue blandit maximus aliquet congue. Pharetra vestibulum posuere ornare faucibus fusce dictumst orci aenean eu facilisis ut volutpat commodo senectus purus himenaeos fames primis convallis nisi.</p>	
+	<p>
+	Vous pouvez nous contacter par email : <a href="mailto://{{ contact.email }}">{{ contact.email }}</a><br>
+	Ou directement sur Discord : <a href="{{ contact.discord }}">{{ contact.discord }}</a>
+	<h4>Réseaux Sociaux</h4>
 	<ul>
-	<li>Email: <a href="mailto://{{ contact.email }}">{{ contact.email }}</a></li>
 	{% for link in contact.links %}
 		<li>{{ link.name }} : <a href="{{link.url}}">{{ link.url }}</a></li>
 	{% endfor %}
 	</ul>
+
+	<h4>Besoin de confidentialité ?</h4>
+<pre>
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+
+xjMEaEyFUBYJKwYBBAHaRw8BAQdAd23wI4tsbNVpbX9Plzcmp6XzyZWQKby/
+REbnxZNczBLNKGQ0dTVndGdocnJhMHpoa3l4am9yeWogPHRlYW1AZ2hzcGFj
+ZS5mcj7CjAQQFgoAHQUCaEyFUAQLCQcIAxUICgQWAAIBAhkBAhsDAh4BACEJ
+ENXPPXnF5Xg4FiEEgd7FwoZY306N/DDc1c89ecXleDimrgEA2Og+7Ot8f2CE
+/RtvBVQ0uJxMao/MPVSiMR6odlIc3VwBAMBtIZcML8ejXbpSuw3JDmkQSkjj
+Yt0oHevb+LTBufAEzjgEaEyFUBIKKwYBBAGXVQEFAQEHQDfY/yyrXgHPsyBK
+WvT+mUSWs0sfHZXe19DIqLplT9BDAwEIB8J4BBgWCAAJBQJoTIVQAhsMACEJ
+ENXPPXnF5Xg4FiEEgd7FwoZY306N/DDc1c89ecXleDjYSgD+MoffrjJDWZD+
+6Bg+4E/Qnv503gbqELZHhmk8kBH1TKkBAOA1O9bQx4gwHannJiRDfIlj4gdQ
+6xaiSXMYB+QiEsYB
+=K0Dl
+-----END PGP PUBLIC KEY BLOCK-----
+</pre>
+	
 </article><br>
 {% endblock %}

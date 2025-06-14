@@ -1,14 +1,13 @@
 default:
   contact:
     email: team@ghspace.fr
+    discord: "https://discord.com/invite/sfW7DrtREZ"
     links:
       - name: Mastodon
         url: "https://infosec.exchange/ghspace.fr"
       - name: Linkedin
         url: "https://linkedin.com/company/ghspacefr"
-      - name: Discord
-        url: "https://discord.gg/invite/0000000"  
-
+        
   wiki_dir: ./posts/wiki
   news_dir: ./posts/news
   header:
