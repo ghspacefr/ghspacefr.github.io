@@ -1,0 +1,47 @@
+<!-- templates/base.html -->
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{% block title %}Grenoble Hackerspace{% endblock %}</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+	</head>
+	<body>
+	<div class="container">
+	<header>
+<pre>
+    |\__/,|   (`\
+  _.|o o  |_   ) )
+-(((---(((--------
+</pre>
+		<h1>GRENOBLE HACKERSPACE</h1>
+		<nav class="bg-color-1" style="padding: 15px;">
+		<ul>
+			{% for item in header %}
+				<li><a href="{{ item.page }}">{{ item.name }}</a></li>
+			{% endfor %}
+		</ul>
+		</nav>
+	</header>
+	
+	<div class="row">
+		<div class="col-sm-8 bg-color-3">
+			{% block content %}{% endblock %}
+		</div>
+		<div class="col-sm-4 bg-color-2">
+			<h3>LOREM IPSUM DOLORE</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Proin tortor purus platea sit eu id nisi litora libero. Neque vulputate consequat ac amet augue blandit maximus aliquet congue. Pharetra vestibulum posuere ornare faucibus fusce dictumst orci aenean eu facilisis ut volutpat commodo senectus purus himenaeos fames primis convallis nisi.</p>
+			</article>
+			<article>
+			<h3>LOREM IPSUM DOLORE</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Proin tortor purus platea sit eu id nisi litora libero. Neque vulputate consequat ac amet augue blandit maximus aliquet congue. Pharetra vestibulum posuere ornare faucibus fusce dictumst orci aenean eu facilisis ut volutpat commodo senectus purus himenaeos fames primis convallis nisi.</p>
+			</article>
+		</div>
+	</div>
+	<footer class="bg-color-1" style="padding: 3px;">
+		Licensed CC BY-SA 4.0 <a href="mailto:team@ghspace.fr">team@hspace.fr</a> build {{ version }}
+	</footer>
+	</div>
+	</body>
+</html>

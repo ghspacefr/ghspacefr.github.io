@@ -1,0 +1,13 @@
+default:
+  header:
+    - name: HOME
+      page: home.html
+    - name: WIKI
+      page: wiki.html
+    - name: CONTACT
+      page: contact.html
+
+templates:
+  home: {}
+  wiki: {}
+  contact: {}
