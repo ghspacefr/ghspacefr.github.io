@@ -1,4 +1,16 @@
 default:
+  contact:
+    email: team@ghspace.fr
+    links:
+      - name: Mastodon
+        url: "https://infosec.exchange/ghspace.fr"
+      - name: Linkedin
+        url: "https://linkedin.com/company/ghspacefr"
+      - name: Discord
+        url: "https://discord.gg/invite/0000000"  
+
+  wiki_dir: ./posts/wiki
+  news_dir: ./posts/news
   header:
     - name: HOME
       page: index.html
@@ -10,6 +22,7 @@ default:
       page: contact.html
 
 templates:
-  index: {}
   wiki: {}
+  news: {}
+  index: {}
   contact: {}

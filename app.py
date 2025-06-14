@@ -22,6 +22,19 @@ def copy_static_to_public(static_folder, public_folder):
         else:
             shutil.copy2(s, d)
 
+# Function to read files from a directory and return their contents as a list
+def load_posts(directory):
+    posts = []
+    for filename in os.listdir(directory):
+        file_path = os.path.join(directory, filename)
+        if os.path.isfile(file_path):
+            with open(file_path, 'r') as file:
+                 posts.append({ 
+                    'title': filename,
+                    'content': file.read()
+                 })
+    return posts
+
 if __name__ == "__main__":
 
     # Load the configuration file
@@ -33,7 +46,10 @@ if __name__ == "__main__":
 
     # Set up the Jinja2 environment
     env = jinja2.Environment(loader=jinja2.FileSystemLoader('templates'))
-
+    
+    # Register the custom filter
+    env.globals['load_posts'] = load_posts
+    
     # Render each template and save the output
     for template_name, template_config in CONFIG['templates'].items():
         template = env.get_template(template_config.get('template', f'{template_name}.html'))

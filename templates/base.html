@@ -30,16 +30,18 @@
 			{% block content %}{% endblock %}
 		</div>
 		<div class="col-sm-4 bg-color-2">
-			<h3>NEWS</h3>
+			<article>
+			<h3>LATEST NEWS</h3>
 			<ul>
-				{% for i in range(1,12) %}
-				<li><a href="#">2025-{{ '{:02}'.format(12-i) }}-14</a></li>
-				{% endfor %}
+			{% for item in load_posts(news_dir)[:5] %}
+				<li><a href="news.html#{{ item.title }}">{{ item.title }}</a></li>
+			{% endfor %}
 			</ul>
+			</article>
 		</div>
 	</div>
 	<footer class="bg-color-1" style="padding: 3px;">
-		Licensed CC BY-SA 4.0 <a href="mailto:team@ghspace.fr">team@hspace.fr</a> build {{ version }}
+		Licensed CC BY-SA 4.0 <a href="mailto://{{ contact.email }}">{{ contact.email }}</a> build {{ version }}
 	</footer>
 	</div>
 	</body>

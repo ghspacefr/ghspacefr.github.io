@@ -1,0 +1,12 @@
+<!-- templates/wiki.html -->
+{% extends "base.html" %}
+
+{% block content %}
+<article>
+	<h3>NEWS</h3>
+	{% for post in load_posts(news_dir) %}
+		<h4  id="{{ post.title }}">{{ post.title }}</h4>
+		<p>{{ post.content }}</p>
+	{% endfor %}
+</article><br>
+{% endblock %}
