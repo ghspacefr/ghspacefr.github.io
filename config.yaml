@@ -1,13 +1,15 @@
 default:
   header:
     - name: HOME
-      page: home.html
+      page: index.html
+    - name: NEWS
+      page: news.html
     - name: WIKI
       page: wiki.html
     - name: CONTACT
       page: contact.html
 
 templates:
-  home: {}
+  index: {}
   wiki: {}
   contact: {}

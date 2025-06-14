@@ -30,13 +30,12 @@
 			{% block content %}{% endblock %}
 		</div>
 		<div class="col-sm-4 bg-color-2">
-			<h3>LOREM IPSUM DOLORE</h3>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Proin tortor purus platea sit eu id nisi litora libero. Neque vulputate consequat ac amet augue blandit maximus aliquet congue. Pharetra vestibulum posuere ornare faucibus fusce dictumst orci aenean eu facilisis ut volutpat commodo senectus purus himenaeos fames primis convallis nisi.</p>
-			</article>
-			<article>
-			<h3>LOREM IPSUM DOLORE</h3>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Proin tortor purus platea sit eu id nisi litora libero. Neque vulputate consequat ac amet augue blandit maximus aliquet congue. Pharetra vestibulum posuere ornare faucibus fusce dictumst orci aenean eu facilisis ut volutpat commodo senectus purus himenaeos fames primis convallis nisi.</p>
-			</article>
+			<h3>NEWS</h3>
+			<ul>
+				{% for i in range(1,12) %}
+				<li><a href="#">2025-{{ '{:02}'.format(12-i) }}-14</a></li>
+				{% endfor %}
+			</ul>
 		</div>
 	</div>
 	<footer class="bg-color-1" style="padding: 3px;">
