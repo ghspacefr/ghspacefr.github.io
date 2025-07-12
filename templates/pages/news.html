@@ -1,0 +1,17 @@
+<!-- news.html -->
+
+{% extends 'base.html' %}
+
+{% set page_title='News' %}
+
+{% block content %}
+
+    <h1>LATEST NEWS</h1>
+
+	{% for post in list_dir("templates/posts") %}
+		<h2>{{ post }}</h2>
+		<p>{{ read_file("templates/posts/" ~ post) }}</p>
+	{% endfor %}
+
+
+{% endblock %}

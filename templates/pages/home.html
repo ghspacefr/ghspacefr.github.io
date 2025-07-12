@@ -1,0 +1,30 @@
+<!-- home.html -->
+
+{% extends 'base.html' %}
+
+{% set page_title='Home' %}
+
+{% block content %}
+
+    <h1>A PROPOS</h1>
+    <p>
+    	<b>GRENOBLE HACKERSPACE</b> est une association loi 1901,
+    	un tier-lieu et une communautée dédiée à la promotion de la culture underground,
+    	la bricole et la sécurité informatique. L'association offre un espace de travail
+    	où des amateurs et des professionnels se réunissent pour partager librement leurs
+    	connaissances, collaborer sur des projets, etc...
+	</p><br>
+	<p>
+		Vous pouvez participer à nos réunions mensuelles, ateliers et événements de manière
+		ponctuelle, ou nous rejoindre en devenant membres actif de l'association. <a href="contact.html">Devenir Membre</a>
+
+
+    <h1>LATEST NEWS</h1>
+
+	{% for post in list_dir("templates/posts")[:1] %}
+		<h2>{{ post }}</h2>
+		<p>{{ read_file("templates/posts/" ~ post) }}</p>
+	{% endfor %}
+
+    
+{% endblock %}

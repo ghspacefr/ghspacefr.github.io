@@ -1,21 +1,25 @@
-<!-- templates/home.html -->
-{% extends "base.html" %}
+
+<!-- home.html -->
+
+{% extends 'base.html' %}
+
+{% set page_title='Home' %}
 
 {% block content %}
-<article>
-	<h3>CONTACT</h3>
-	<p>
-	Vous pouvez nous contacter par email : <a href="mailto://{{ contact.email }}">{{ contact.email }}</a><br>
-	Ou directement sur Discord : <a href="{{ contact.discord }}">{{ contact.discord }}</a>
-	<h4>Réseaux Sociaux</h4>
-	<ul>
-	{% for link in contact.links %}
-		<li>{{ link.name }} : <a href="{{link.url}}">{{ link.url }}</a></li>
-	{% endfor %}
-	</ul>
 
+    <h1>CONTACT</h1>
+    <p>
+    Vous pouvez nous contacter par email : <a href="mailto:{{email}}">{{email}}</a><br>
+    Ou directement sur Discord : <a href="{{discord}}">{{discord}}</a>
+	</p>
+	<h2>Réseaux Sociaux</h2>
+	<ul>
+		{% for e in links %}
+			<li>{{e.name}} : <a href="{{e.link}}">{{e.link}}</a></li>
+		{% endfor %}
+    </ul>
 	<h4>Besoin de confidentialité ?</h4>
-<pre style="overflow-x: scroll;">
+	<pre style="overflow-x: scroll;">
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 
 xjMEaEyFUBYJKwYBBAHaRw8BAQdAd23wI4tsbNVpbX9Plzcmp6XzyZWQKby/
@@ -30,7 +34,6 @@ ENXPPXnF5Xg4FiEEgd7FwoZY306N/DDc1c89ecXleDjYSgD+MoffrjJDWZD+
 6xaiSXMYB+QiEsYB
 =K0Dl
 -----END PGP PUBLIC KEY BLOCK-----
-</pre>
-	
-</article><br>
+	</pre>
+    
 {% endblock %}

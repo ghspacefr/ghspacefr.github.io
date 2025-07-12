@@ -1,27 +1,31 @@
-default:
-  contact:
-    email: team@ghspace.fr
-    discord: "https://discord.com/invite/sfW7DrtREZ"
-    links:
-      - name: Mastodon
-        url: "https://infosec.exchange/ghspace.fr"
-      - name: Linkedin
-        url: "https://linkedin.com/company/ghspacefr"
-        
-  wiki_dir: ./posts/wiki
-  news_dir: ./posts/news
-  header:
-    - name: HOME
-      page: index.html
-    - name: NEWS
-      page: news.html
-    - name: WIKI
-      page: wiki.html
-    - name: CONTACT
-      page: contact.html
+style: static/style.css
 
-templates:
-  wiki: {}
-  news: {}
-  index: {}
-  contact: {}
+menu:
+  - name: Home
+    link: 'index.html'
+  - name: News
+    link: 'news.html'
+  - name: Contact
+    link: 'contact.html'    
+  - name: '#'
+    link: '#'    
+    class: 'float-right'
+
+pages:
+
+  - name: index.html
+    template: pages/home.html
+    config: {}
+  - name: news.html
+    template: pages/news.html
+    config: {}
+  - name: contact.html
+    template: pages/contact.html
+    config:
+      email: team@ghspace.fr
+      discord: https://discord.com/invite/sfW7DrtREZ
+      links:
+        - name: Mastodon
+          link: https://infosec.exchange/ghspace.fr
+        - name: Linkedin
+          link: https://linkedin.com/company/ghspacefr
