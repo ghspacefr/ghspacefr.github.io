@@ -10,7 +10,7 @@
 
 	{% for post in list_dir("templates/posts") %}
 		<h2>{{ post }}</h2>
-		<p>{{ read_file("templates/posts/" ~ post) }}</p>
+		<pre>{{ read_file("templates/posts/" ~ post) }}</pre>
 	{% endfor %}
 
 

@@ -1,1 +1,25 @@
-Hello World !
+░▒█░▒█░█▀▀░█░░█░░▄▀▀▄░░░▒█░░▒█░▄▀▀▄░█▀▀▄░█░░█▀▄
+░▒█▀▀█░█▀▀░█░░█░░█░░█░░░▒█▒█▒█░█░░█░█▄▄▀░█░░█░█
+░▒█░▒█░▀▀▀░▀▀░▀▀░░▀▀░░░░▒▀▄▀▄▀░░▀▀░░▀░▀▀░▀▀░▀▀░
+
+J'ai le plaisir de vous annoncer la création de l'association par l'assemblée constitutive ce 8 mai
+au Tonneau de Diogène 6 Place Notre-dame, Grenoble, FR 38000
+
+<i>"Do what you want 'cause a pirate is free, you are a pirate !"</i>
+
+Pour rappel, le hackerspace repose sur le partage gratuit, 
+libre et non faussé du savoir-faire et de l'information. 
+Notre objectif est de créer un espace pour apprendre les uns des autres, 
+collaborer, détourner mais surtout, s'amuser.
+
+Nous sommes une communauté de professionnels, de passionnés, de curieux
+et de créateurs revendiquant une identité et une culture propre et underground.
+
+Nous refusons toute utilisation authoritaire de l'informatique.
+
+Nous croyons que l'information, les ressources et les compétences doivent être partagées 
+librement et sans restriction. Nous pensons que c'est en partageant nos connaissances et 
+nos expériences que nous pouvons apprendre les uns des autres, progresser et créer ensemble.
+
+<b>Bien évidemment, nous condamnons fermement toute activité criminelle au sein ou par des membres du hackerspace. 
+Nous nous engageons à respecter à responsabiliser ses membres.</b>

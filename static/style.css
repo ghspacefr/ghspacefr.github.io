@@ -22,15 +22,15 @@ body
 	width: 55%;
 	margin: 0 auto;
 	font-family: Courier New, courier;
-	font-size: 1em;
+	font-size: 1rem;
 	background: light-dark(var(--bg-lighter), var(--bg-darker));
 	color: light-dark(var(--text-light), var(--text-dark));	
 }
 
-pre { font-size: 1.1em; }
+pre { font-size: 1rem; }
 
-h1,h2 { font-size: 1.1em; }
-h3,h4 { font-size: 1em; }
+h1,h2 { font-size: 1.1rem; }
+h3,h4 { font-size: 1rem; }
 
 h1
 {
