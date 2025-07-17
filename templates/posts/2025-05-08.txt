@@ -7,18 +7,15 @@ au Tonneau de Diogène 6 Place Notre-dame, Grenoble, FR 38000
 
 <i>"Do what you want 'cause a pirate is free, you are a pirate !"</i>
 
-Pour rappel, le hackerspace repose sur le partage gratuit, 
-libre et non faussé du savoir-faire et de l'information. 
-Notre objectif est de créer un espace pour apprendre les uns des autres, 
-collaborer, détourner mais surtout, s'amuser.
+Pour rappel, le hackerspace repose sur le partage gratuit, libre et non faussé du savoir-faire et de l'information. 
+Notre objectif est de créer un espace pour apprendre les uns des autres, collaborer, détourner mais surtout, s'amuser.
+Nous sommes une communauté de professionnels, de passionnés, de curieux et de créateurs revendiquant une identitée propre
+et underground.
 
-Nous sommes une communauté de professionnels, de passionnés, de curieux
-et de créateurs revendiquant une identité et une culture propre et underground.
+Nous combattons toute utilisation authoritaire des outils informatiques.
 
-Nous refusons toute utilisation authoritaire de l'informatique.
-
-Nous croyons que l'information, les ressources et les compétences doivent être partagées 
-librement et sans restriction. Nous pensons que c'est en partageant nos connaissances et 
-nos expériences que nous pouvons apprendre les uns des autres, progresser et créer ensemble.
+Nous croyons que l'information, les compétences et les moyens de production doivent être partagées
+librement. 
 
 <b>Bien évidemment, nous condamnons toute activité criminelle au sein ou par des membres du hackerspace.</b>
+
