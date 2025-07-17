@@ -12,10 +12,8 @@ Notre objectif est de créer un espace pour apprendre les uns des autres, collab
 Nous sommes une communauté de professionnels, de passionnés, de curieux et de créateurs revendiquant une identitée propre
 et underground.
 
-Nous combattons toute utilisation authoritaire des outils informatiques.
-
-Nous croyons que l'information, les compétences et les moyens de production doivent être partagées
-librement. 
+Nous pensons que l'information, les compétences et les moyens de production doivent être partagées
+librement et combattons toute utilisation authoritaire des outils informatiques.
 
 <b>Bien évidemment, nous condamnons toute activité criminelle au sein ou par des membres du hackerspace.</b>
 
