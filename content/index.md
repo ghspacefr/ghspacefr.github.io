@@ -62,12 +62,7 @@ Q : **Puis-je venir de manière ponctuelle ?** <br>
 A : Bien sûr ! Les Apéroots et certains ateliers sont ouverts à tou·tes.
 
 Q : **C’est légal ?** <br>
-A : Nous nous sommes rassemblés pour nous amuser, certe, mais dans un cadre contrôllé.<br>
-    Tout ce qui est fait dans le cadre du Hackerspace respecte la loi. Le reste, *cela ne nous regarde pas* !
+A : Nous nous sommes rassemblés pour nous amuser, certe, mais dans un cadre contrôllé. Tout ce qui est fait dans le cadre du Hackerspace respecte la loi. Le reste, *cela ne nous regarde pas* !
 
 Q : **Combien ça coûte ?** <br>
-A : **Le prix est libre** mais un **abonnement de 16€/mois** est recommandé.
-
-- Vous fixez votre contribution **en fonction de vos possibilités**
-- Notre trésorerie est transparente et ajustée collectivement lors des assemblées.
-- L'adhésion ce fait par cooptation et/ou recommendation, **chaque adhésion est validée collectivement**.
+A : **Le prix est libre** mais un **abonnement de 16€/mois** est recommandé. Notre trésorerie est transparente et ajustée collectivement lors des assemblées. L'adhésion ce fait par cooptation et/ou recommendation, **chaque adhésion est validée collectivement**.
