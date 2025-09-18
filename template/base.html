@@ -6,6 +6,7 @@
 	<title>{{ page.title | safe }}</title>
 </head>
 <body>
+	<br>
 	<header>{% block header %}
 	{% include "parts/header.html" %}
 	{% endblock %}</header>
@@ -16,6 +17,7 @@
 	<footer>{% block footer %}
 	{% include "parts/footer.html" %}
 	{% endblock %}</footer>
+	<br>
 </body>
 <script>
 cl=document.body.classList;ls=localStorage
