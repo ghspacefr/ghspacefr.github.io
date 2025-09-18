@@ -49,4 +49,4 @@ A : Nous nous sommes rassemblés pour nous amuser, certe, mais dans un cadre con
     Tout ce qui est fait dans le cadre du Hackerspace respecte la loi. Le reste, *cela ne nous regarde pas* !
 
 Q : **Combien ça coûte ?** <br>
-A : **Le prix est libre**. Vous fixez votre contribution en fonction de vos possibilités mais un [abonnement de 16€/mois](/contact.html) est recommandé. Notre trésorerie est transparente et ajustée collectivement lors des assemblées. L'adhésion ce fait par cooptation et/ou recommendation, **chaque adhésion est validée collectivement**.
+A : **Le prix est libre**. Vous fixez votre contribution en fonction de vos possibilités mais un **abonnement de 16€/mois** est recommandé. Notre trésorerie est transparente et ajustée collectivement lors des assemblées. L'adhésion ce fait par cooptation et/ou recommendation, **chaque adhésion est validée collectivement**.
