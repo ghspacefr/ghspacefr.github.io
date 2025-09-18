@@ -1,227 +1,94 @@
 #!/usr/bin/env python
-# ============================================================================
-# Yass Generator: Yet Another Static Site Generator
-# ============================================================================
-# A simple Python-based static site generator.
-#
-# Author: nflatrea <Noë Flatreaud>
-#
-# MIT License
-# Copyright (c) 2025 GRENOBLE HACKERSPACE
-#
-# Permission is hereby granted, free of charge, to any person obtaining a copy
-# of this software and associated documentation files (the "Software"), to deal
-# in the Software without restriction, including without limitation the rights
-# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-# copies of the Software, and to permit persons to whom the Software is
-# furnished to do so, subject to the following conditions:
-# 
-# The above copyright notice and this permission notice shall be included in all
-# copies or substantial portions of the Software.
-# 
-# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-# SOFTWARE.
-#
-# ============================================================================
+
 import os
+import re
+import yaml
 import shutil
 
-import yaml
-import jinja2
-import argparse
-import datetime
+from datetime import datetime
+from markdown import markdown
 
-import http.server
+from collections import defaultdict
+ 
+from jinja2 import select_autoescape
+from jinja2 import Environment, FileSystemLoader
 
-def get_current_date(format='%Y-%m-%d %H:%M'):
-    return datetime.datetime.now().strftime(format)
+CONTENT_DIR         = os.environ.get('CONTENT_DIR', 'content')
+TEMPLATE_DIR        = os.environ.get('TEMPLATE_DIR', 'template')
+PUBLIC_DIR          = os.environ.get('PUBLIC_DIR', 'public')
+STATIC_DIR          = os.environ.get('STATIC_DIR', 'static')
+BASE_TEMPLATE       = os.environ.get('BASE_TEMPLATE', 'base.html')
+CONFIG_FILE         = os.environ.get('CONFIG_FILE', 'config.yaml')
 
+def read_content(path, **kwargs):
+    with open(path, 'r', **kwargs) as f:
+        return f.read().strip()
 
-def list_dir(directory, extension='.txt'):
-    files = []
-    for filename in os.listdir(directory):
-        if filename.endswith(extension):
-            files.append(filename)
-    return files
+def write_content(path, content, **kwargs):
+    with open(path, 'w', **kwargs) as f:
+        f.write(content.strip())
 
-def read_file(file_path):
-    with open(file_path, 'r') as file:
-        return file.read()
+def parse_front_matter(content):
 
-# -------------------------------------------------
+    _regex = re.compile(r'^---\s*([\s\S]*?)\s*---', re.MULTILINE)
+    _match = _regex.search(content)
+    _page  = {}
     
-def load_config(file_path, default = None):
-    try:
-        with open(file_path, 'r') as file:
-            config = default or {}
-            config.update(yaml.safe_load(file))
-            return config
-    except FileNotFoundError:
-        print(f"File {file_path} not found.")
-        return None
-    except yaml.YAMLError as e:
-        print(f"Error parsing YAML: {e}")
-        return None
-
-def serve(host, port, public_dir='public'):
-
-    if not os.path.exists(public_dir):
-        print(f"Error: The '{public_dir}' folder does not exist.")
-        return
-
-    # Create a simple HTTP request handler
-    class RequestHandler(http.server.SimpleHTTPRequestHandler):
-        def do_GET(self):
-            requested_path = self.path
-            # If the requested path is empty, serve index.html
-            if requested_path == '/': requested_path = '/index.html'
-            file_path = os.path.join(public_dir, requested_path.lstrip('/'))
-
-            if os.path.exists(file_path) and os.path.isfile(file_path):
-                self.send_response(200)
-                self.send_header('Content-type', self.guess_type(file_path))
-                self.end_headers()
-                with open(file_path, 'rb') as file:
-                    self.wfile.write(file.read())
-
-            else:
-                self.send_response(404)
-                self.send_header('Content-type', 'text/plain')
-                self.end_headers()
-                self.wfile.write(b"404 Not Found")
-
-    server_address = (host, port)
-    httpd = http.server.HTTPServer(server_address, RequestHandler)
-    print(f"Serving HTTP on {host}:{port} from '{public_dir}'...")
-    httpd.serve_forever()
-
-def build_page(template_path, config, output_path):
-
-    with open(template_path, 'r') as file:
-        template_content = file.read()
-
-    template = jinja2.Template(template_content)
-    rendered_content = template.render(config)
-    output_dir = os.path.dirname(output_path)
-
-    if output_dir and not os.path.exists(output_dir):
-        os.makedirs(output_dir)
-
-    print(f"Built page {output_path} from template {template_path}")
-
-    with open(output_path, 'w') as file:
-        file.write(rendered_content)
+    if _match:
+        _page.update(yaml.safe_load(_match.group(1)))
+        _page["content"] = content[len(_match.group(0)):].strip()
+    else:
+        _page["content"] = content.strip()
         
-def build_pages(config):
+    return _page
 
-    static_dir = config.get('static_dir')
-    public_dir = config.get('public_dir')
-    template_dir = config.get('template_dir')
-    pages = config.get('pages', [])
-
-    if not public_dir or not template_dir:
-        print("Error: public_dir and template_dir are required.")
-        return
-
-    if static_dir and os.path.exists(static_dir):
-            static_output_dir = os.path.join(public_dir, os.path.basename(static_dir))
-            if os.path.exists(static_output_dir):
-                shutil.rmtree(static_output_dir)
-            shutil.copytree(static_dir, static_output_dir)
-            print(f"Copied static directory from {static_dir} to {static_output_dir}")
-
-    env = jinja2.Environment(loader=jinja2.FileSystemLoader(template_dir))
-
-    env.globals['get_current_date'] = get_current_date
-    env.globals['list_dir'] = list_dir
-    env.globals['read_file'] = read_file
-
-    for page in pages:
-        name = page.get('name')
-        template_name = page.get('template', name)
-
-        page_config = config
-        page_config.update(page.get('config', {}))
-        
-        if not (name and template_name):
-            print(f"Error: name and template are required for page {page}.")
-            continue
-
-        template = env.get_template(template_name)
-        rendered_content = template.render(page_config)
-        output_path = os.path.join(public_dir, name)
-
-        output_dir = os.path.dirname(output_path)
-        if output_dir and not os.path.exists(output_dir):
-            os.makedirs(output_dir)
-
-        with open(output_path, 'w') as file:
-            file.write(rendered_content)
-
-        print(f"Built page {name}.")
-
-def main():
-
-    parser = argparse.ArgumentParser(description='Build and serve pages using a configuration file.')
-    subparsers = parser.add_subparsers(dest='command', help='Sub-command help')
-
-    build_parser = subparsers.add_parser('build', help='Build pages')
-    build_parser.add_argument('-f', '--file', help='Path to the configuration file', default='config.yaml')
-    build_parser.add_argument('-e', '--extra_vars', nargs='*', help='Extra configuration variables', default=[])
-
-    serve_parser = subparsers.add_parser('serve', help='Serve pages')
-    serve_parser.add_argument('-f', '--file', help='Path to the configuration file', default='config.yaml')
-    serve_parser.add_argument('-e', '--extra_vars', nargs='*', help='Extra configuration variables', default=[])
-
-    try:
-        args = parser.parse_args()
-    except argparse.ArgumentError:
-        parser.print_help()
-        return
-
-    if not args.command:
-        parser.print_help()
-        return
-
-    default_config = {
-        'host': "0.0.0.0",
-        'port': 3444,
-        'static_dir': 'static',
-        'public_dir': 'public',
-        'template_dir': 'templates',
-        'pages': []
-    }
-
-    config = load_config(args.file, default_config)
-    if config is None:
-        print("Error: Failed to load configuration.")
-        return
-
-    if args.extra_vars:
-        for var in args.extra_vars:
-            try:
-                key, value = var.split('=')
-                config[key] = value
-            except ValueError:
-                print(f"Error: Invalid extra variable format '{var}'. Use 'key=value'.")
-                parser.print_help()
-                return
-
-    try:
-        if args.command == 'build':
-            build_pages(config)
-        elif args.command == 'serve':
-            serve(config["host"], int(config["port"]), config["public_dir"])
-        else:
-            print(f"Error: Unknown command '{args.command}'.")
-            parser.print_help()
-    except Exception as e:
-        print(f"An error occurred: {e}")
+def get_pages(path):
+    pages = defaultdict(list)
+    for root, _, files in os.walk(path):
+        subdir = os.path.normpath(os.path.relpath(root, path))
+        for filename in files:
+            if not filename.endswith('.md'): continue
+            src = os.path.join(root, filename)
+            dst = os.path.join(subdir, filename.replace(".md", ".html"))
+            raw_content = read_content(src, encoding='utf-8')
+            page = parse_front_matter(raw_content)
+            page.update({ "url": dst, "filename": filename })
+            pages[subdir].append(page)
+            
+    return pages
 
 if __name__ == "__main__":
-    main()
+
+    if not os.path.exists(PUBLIC_DIR): os.makedirs(PUBLIC_DIR)
+
+    site = yaml.safe_load(read_content(CONFIG_FILE))
+    site.update({ "last_update": datetime.now().isoformat() })
+
+    env = Environment(
+                loader=FileSystemLoader(TEMPLATE_DIR), 
+                autoescape=select_autoescape(['html', 'xml']))
+
+    env.filters['markdown'] = markdown
+    
+    pages = get_pages(CONTENT_DIR)
+    
+    for subdir,subpages in pages.items(): 
+        for page in subpages:
+
+            dst = os.path.normpath(os.path.join(PUBLIC_DIR, page["url"]))
+            if not os.path.exists(os.path.dirname(dst)): os.makedirs(os.path.dirname(dst))
+        
+            page.setdefault("template", BASE_TEMPLATE)
+            page.setdefault("last_update", datetime.now().isoformat())
+
+            template = env.get_template(page.get('template'))
+            html = template.render(page=page, site=site, pages=pages)
+            write_content(dst, html, encoding='utf-8')
+            print(f"Rendered {dst}")  
+
+    shutil.copytree(STATIC_DIR,
+        os.path.join(PUBLIC_DIR,STATIC_DIR),
+        dirs_exist_ok=True)
+
+    print(f"Copied {STATIC_DIR} to {PUBLIC_DIR}")
+    print(f"Done!")

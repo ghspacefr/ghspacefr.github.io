@@ -1,0 +1,26 @@
+{% set blog_posts = pages["blog"] | sort(attribute='last_update', reverse=True) %}
+
+{% extends 'base.html' %}
+{% block content %}
+{{ page.content | markdown | safe | trim }}
+
+<h4 class="bg-2">AUX DERNIÈRES NOUVELLES</h4>
+<span>{{ blog_posts[0].last_update }}&nbsp;<a href="{{ blog_posts[0].url }}">{{ blog_posts[0].title }}</a></span>
+<p>{{ (blog_posts[0].content | safe)[:450] }}...<a href="{{ blog_posts[0].url }}">Lire la suite</a></p>
+<pre>			
+
+        |\___/|
+        )     (             .              '
+       =\     /=
+         )===(       *
+        /     \
+       /       \
+       \       /
+_/\_/\_/\__  _/_/\_/\_/\_/\_/\_/\_/\_/\_/\_
+|  |  |  |( (  |  |  |  |  |  |  |  |  |  |
+|  |  |  | ) ) |  |  |  |  |  |  |  |  |  |
+|  |  |  |(_(  |  |  |  |  |  |  |  |  |  |
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+</pre>
+
+{% endblock %}

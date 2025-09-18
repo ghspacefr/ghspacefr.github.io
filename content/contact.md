@@ -1,25 +1,11 @@
+---
+title: Contact
+template: contact.html
+---
 
-<!-- home.html -->
+### Besoin de confidentialité ?
 
-{% extends 'base.html' %}
-
-{% set page_title='Home' %}
-
-{% block content %}
-
-    <h1>CONTACT</h1>
-    <p>
-    Vous pouvez nous contacter par email : <a href="mailto:{{email}}">{{email}}</a><br>
-    Ou directement sur Discord : <a href="{{discord}}">{{discord}}</a>
-	</p>
-	<h2>Réseaux Sociaux</h2>
-	<ul>
-		{% for e in links %}
-			<li>{{e.name}} : <a href="{{e.link}}">{{e.link}}</a></li>
-		{% endfor %}
-    </ul>
-	<h4>Besoin de confidentialité ?</h4>
-	<pre style="overflow-x: scroll;">
+<pre>
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 
 xjMEaEyFUBYJKwYBBAHaRw8BAQdAd23wI4tsbNVpbX9Plzcmp6XzyZWQKby/
@@ -34,6 +20,4 @@ ENXPPXnF5Xg4FiEEgd7FwoZY306N/DDc1c89ecXleDjYSgD+MoffrjJDWZD+
 6xaiSXMYB+QiEsYB
 =K0Dl
 -----END PGP PUBLIC KEY BLOCK-----
-	</pre>
-    
-{% endblock %}
+</pre>

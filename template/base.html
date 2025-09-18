@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" type="text/css" href="{{ site.style }}" />
+	<title>{{ page.title | safe }}</title>
+</head>
+<body>
+	<header>{% block header %}
+	{% include "parts/header.html" %}
+	{% endblock %}</header>
+	<div id="content">{% block content %}
+	<h2>{{ page.title | safe }}</h2>
+	{{ page.content | markdown | safe }}
+	{% endblock %}</div>
+	<footer>{% block footer %}
+	{% include "parts/footer.html" %}
+	{% endblock %}</footer>
+</body>
+<script>
+cl=document.body.classList;ls=localStorage
+function setColorScheme()
+{const c=ls.getItem('colorScheme');c==='dark'?cl.add('dark'):cl.remove('dark'); }
+function toggleScheme()
+{cl.toggle('dark');ls.setItem('colorScheme',cl.contains('dark')?'dark':''); }
+setColorScheme();
+</script>
+</html>

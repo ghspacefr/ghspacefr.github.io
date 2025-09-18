@@ -1,32 +1,30 @@
-style: static/style.css
+style: "/static/style.css"
+
+email: "team@ghspace.fr"
+discord: "https://discord.com/invite/sfW7DrtREZ"
+
+social:
+  - name: Mastodon
+    url: "https://infosec.exchange/@ghspacefr"
+  - name: Linkedin
+    url: "https://linkedin.com/company/ghspacefr"
 
 menu:
-  - name: Home
-    link: 'index.html'
-  - name: News
-    link: 'news.html'
-  - name: Contact
-    link: 'contact.html'    
-  - name: '#'
-    link: '#'
-    onclick: document.body.classList.toggle('dark')
-    class: 'float-right'
 
-pages:
+  - name: "[Home]"
+    href: "/index.html"
+    
+  - name: "[Blog]"
+    href: "/blog.html"
 
-  - name: index.html
-    template: pages/home.html
-    config: {}
-  - name: news.html
-    template: pages/news.html
-    config: {}
-  - name: contact.html
-    template: pages/contact.html
-    config:
-      email: team@ghspace.fr
-      discord: https://discord.com/invite/sfW7DrtREZ
-      links:
-        - name: Mastodon
-          link: https://infosec.exchange/@ghspacefr
-        - name: Linkedin
-          link: https://linkedin.com/company/ghspacefr
+  - name: "[Contact]"
+    href: "/contact.html"
+
+  - name: "[#]"
+    class: "right"
+    onclick: "toggleScheme()"
+    href: "#"
+
+  - name: "[RSS]"
+    class: "right"
+    href: "#"

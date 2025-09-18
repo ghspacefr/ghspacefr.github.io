@@ -43,7 +43,7 @@ jobs:
           pip install -r requirements.txt
 
       - name: Build the website
-        run: python yass build
+        run: python yass
 
       - name: Setup Pages
         uses: actions/configure-pages@v5

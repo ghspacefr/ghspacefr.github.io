@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content%}
+<h2>{{ page.title | safe }}</h2>
+
+<p>Vous pouvez nous contacter par email : <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+<p>Ou directement sur Discord : <a href="{{ site.discord }}">{{ site.discord }}</a></p>
+
+<h4>Réseaux sociaux</h4>
+
+<ul>
+{% for item in site.social %}
+<li>{{ item.name }}: <a href="{{ item.url }}">{{ item.url }}</a></li>
+{% endfor %}
+</ul>
+{{ page.content | markdown | safe }}
+{% endblock %}

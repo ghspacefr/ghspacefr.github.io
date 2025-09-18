@@ -1,73 +1,61 @@
-:root 
+:root
 {
-	color-scheme: light dark;
-	--bg-dark: #1d2224;
-	--bg-light: #ddd;
-	--bg-darker: #050709;
-	--bg-lighter: #fff;
-	--text-dark: #f0f0f0;
-	--text-light: #000;
-	--link-dark: #2186d9;
-	--link-light: #0f0fef;
-	--link-light-visited: #5b228f;
-	--link-dark-visited: var(--link-dark);
+    color-scheme: light dark;
+
+    --fg-1: #000;
+    --fg-dark-1: #fff;
+
+    --fg-2: #0f0fef;
+    --fg-dark-2: #2186d9;
+    
+    --bg-1: #eee;
+    --bg-dark-1: #111;
+
+    --bg-2: #ddd;
+    --bg-dark-2: #222;	
 }
 
-.light 	{ color-scheme: light; }
-.dark { color-scheme: dark; }
-
-a { color: light-dark(var(--link-light), var(--link-dark)); }
-
-a:hover { text-decoration: underline; }
-a:visited { color: light-dark(var(--link-light-visited), var(--link-dark)); }
 body
 {
 	width: 55%;
 	margin: 0 auto;
-	font-family: Courier New, courier;
 	font-size: 1rem;
-	background: light-dark(var(--bg-lighter), var(--bg-darker));
-	color: light-dark(var(--text-light), var(--text-dark));	
+	font-family: monospace;
+	color: light-dark(var(--fg-1), var(--fg-dark-1));
+	background-color: light-dark(var(--bg-1), var(--bg-dark-1));;
 }
-
-pre
-{
-	font-size: 1em;
-	white-space: pre-wrap;
-}
-
-h1,h2 { font-size: 1.1rem; }
-h3,h4 { font-size: 1rem; }
-
-h1
-{
-	text-align: left;
-	padding: 0 10px;
-	background: light-dark(var(--bg-light), var(--bg-dark));
-}
-
-h1#footer { font-weight: normal; }
-
-p { margin: auto; word-break: break-word; }
 
 header ul
-{ 
-	list-style: none; 
-	padding: 0; 
-	padding-right: 3px;
-	li { display: inline; }
-}
-
-.float-right { float: right; }						
-
-.columns
 {
-	display: flex;
-	width: 100%;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	li { display: inline; }
+	a  { text-decoration: none; }
 }
 
-.flex-25 { flex: 0.25; }
-.flex-75 { flex: 0.75; }
+a
+{ 
+	color: light-dark(var(--fg-2), var(--fg-dark-2));
+	text-decoration: underline;
+}
+
+a:hover 
+{ 
+	color: light-dark(var(--fg-2), var(--fg-dark-2)); 
+	background-color: light-dark(var(--bg-1), var(--bg-dark-1)); 
+}
+
+
+.light { color-scheme: light; }
+.dark  { color-scheme: dark; }
+
+.right { float: right; }
+
+.fg-1 { color: light-dark(var(--fg-1), var(--fg-dark-1)); }
+.bg-1 { background-color: light-dark(var(--bg-1), var(--bg-dark-1)); }
+.bg-2 { background-color: light-dark(var(--bg-2), var(--bg-dark-2)); }
+
 
 @media only screen and (max-width: 1444px)
 {
