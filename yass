@@ -52,7 +52,8 @@ def get_pages(path):
             dst = os.path.join(subdir, filename.replace(".md", ".html"))
             raw_content = read_content(src, encoding='utf-8')
             page = parse_front_matter(raw_content)
-            page.update({ "url": dst, "filename": filename })
+            page.setdefault("url", dst)
+            page.update({ "filename": filename })
             pages[subdir].append(page)
             
     return pages

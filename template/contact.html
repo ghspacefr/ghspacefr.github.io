@@ -2,15 +2,20 @@
 {% block content%}
 <h2>{{ page.title | safe }}</h2>
 
-<p>Vous pouvez nous contacter par email : <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
-<p>Ou directement sur Discord : <a href="{{ site.discord }}">{{ site.discord }}</a></p>
+<hr>
+<p>Le local est situé <b>{{ site.address }}</b><br>
+<i>Portes arrière premier étage, au fond à droite</i></p>
+<hr>
 
 <h4>Réseaux sociaux</h4>
+
+Vous pouvez nous contacter par email : <a href="mailto:{{ site.email }}" >{{ site.email }}</a>, ou via :
 
 <ul>
 {% for item in site.social %}
 <li>{{ item.name }}: <a href="{{ item.url }}">{{ item.url }}</a></li>
 {% endfor %}
 </ul>
+
 {{ page.content | markdown | safe }}
 {% endblock %}

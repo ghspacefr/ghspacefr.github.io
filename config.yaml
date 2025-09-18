@@ -1,9 +1,10 @@
 style: "/static/style.css"
 
 email: "team@ghspace.fr"
-discord: "https://discord.com/invite/sfW7DrtREZ"
 
 social:
+  - name: Discord
+    url: "https://discord.com/invite/sfW7DrtREZ"
   - name: Mastodon
     url: "https://infosec.exchange/@ghspacefr"
   - name: Linkedin
@@ -28,3 +29,5 @@ menu:
   - name: "[RSS]"
     class: "right"
     href: "#"
+
+address: "17 Rue du Pré Ruffier, 38400 Saint-Martin-d'Hères"
