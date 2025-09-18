@@ -58,7 +58,7 @@ WWWWWWWWWWWWWIIIIIIii;;::..;..;\WWWWWWWWIIII;::; :::::::::.....::       \
 Q : **Faut-il être expert·e pour venir ?** <br>
 A : Non ! L’idée est justement d’apprendre ensemble. Seuls prérequis : curiosité et respect du lieu.
 
-Q : **Puis-je venir juste pour un événement ponctuel ?** <br>
+Q : **Puis-je venir de manière ponctuelle ?** <br>
 A : Bien sûr ! Les Apéroots et certains ateliers sont ouverts à tou·tes.
 
 Q : **C’est légal ?** <br>
@@ -66,4 +66,8 @@ A : Nous nous sommes rassemblés pour nous amuser, certe, mais dans un cadre con
     Tout ce qui est fait dans le cadre du Hackerspace respecte la loi. Le reste, *cela ne nous regarde pas* !
 
 Q : **Combien ça coûte ?** <br>
-A : **Le prix est libre**. Vous fixez votre contribution en fonction de vos possibilités mais un **abonnement de 16€/mois** est recommandé. Notre trésorerie est transparente et ajustée collectivement lors des assemblées. L'adhésion ce fait par cooptation et/ou recommendation, **chaque adhésion est validée collectivement**.
+A : **Le prix est libre** mais un **abonnement de 16€/mois** est recommandé.
+
+- Vous fixez votre contribution **en fonction de vos possibilités**
+- Notre trésorerie est transparente et ajustée collectivement lors des assemblées.
+- L'adhésion ce fait par cooptation et/ou recommendation, **chaque adhésion est validée collectivement**.
