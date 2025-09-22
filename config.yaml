@@ -1,6 +1,6 @@
 email: "team@ghspace.fr"
 
-style: "/static/css/light.css"
+style: "/static/css/style.css"
    
 menu:
   - name: "[Home]"
