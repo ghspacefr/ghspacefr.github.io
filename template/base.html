@@ -10,8 +10,10 @@
 	<header>{% block header %}
 	{% include "parts/header.html" %}
 	{% endblock %}</header>
-	<div id="content">{% block content %}
+	<div id="content">{% block content %}	
+	{% if page.title %}
 	<h2>{{ page.title | safe }}</h2>
+	{% endif%}
 	{{ page.content | markdown | safe }}
 	{% endblock %}</div>
 	<footer>{% block footer %}
@@ -20,11 +22,19 @@
 	<br>
 </body>
 <script>
-cl=document.body.classList;ls=localStorage
-function setColorScheme()
-{const c=ls.getItem('colorScheme');c==='dark'?cl.add('dark'):cl.remove('dark'); }
-function toggleScheme()
-{cl.toggle('dark');ls.setItem('colorScheme',cl.contains('dark')?'dark':''); }
-setColorScheme();
+function getColorScheme()
+{
+  if (localStorage.getItem('theme')) return localStorage.getItem('theme');
+  var matchMedia = window.matchMedia('(prefers-color-scheme: dark)').matches
+  return (matchMedia) ? 'dark' : 'light';
+}
+function setColorScheme(theme)
+{
+  document.documentElement.className = theme;
+  localStorage.setItem('theme', document.documentElement.className);
+}
+function toggleColorScheme()
+{ setColorScheme(getColorScheme()==='dark' ? 'light' : 'dark'); }
+setColorScheme(getColorScheme());
 </script>
 </html>

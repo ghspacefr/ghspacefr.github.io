@@ -1,7 +1,13 @@
 ---
 title: Home
-template: index.html
 ---
+
+<h4 class="bg-2">ACTUALITÉ</h4>
+
+{% set blog_posts = pages["blog"] | sort(attribute='last_update', reverse=True) %}
+
+{% for item in blog_posts[:3] %}
+- {{ item.last_update }}  [{{ item.title }}]({{ item.subpath }}){% endfor %}
 
 <h4 class="bg-2">A PROPOS</h4>
 
@@ -24,7 +30,6 @@ WWWWWWWWWWWWWIIIIIIii;;::..;..;\WWWWWWWWIIII;::; :::::::::.....::       \
 
 **GRENOBLE HACKERSPACE** est une association loi 1901, un tier-lieu et une communautée dédiée la promotion des arts, de l'expérimentation, l'informatique et la cybersécurité. L'association offre un espace de rencontre et de travail pour apprendre, bricoler, collaborer, détourner ensemble.
 
-
 <h4 class="bg-2">AGENDA</h4>
 
 ### Les trucs récurrents
@@ -35,7 +40,7 @@ WWWWWWWWWWWWWIIIIIIii;;::..;..;\WWWWWWWWIIII;::; :::::::::.....::       \
 
 ---
 
-- **Où?**: [Au tonneau de Diogène, 38100 Grenoble](https://shorturl.at/mJfBF)
+- **Où?**: Au **Tonneau de Diogène, 38100 Grenoble**
 - **Quoi?**: Apéro convivial pour rencontrer la communauté autour d’un verre.
 - **Quand?**: 1er jeudi du mois, 18h30
 
@@ -61,8 +66,27 @@ A : Non ! L’idée est justement d’apprendre ensemble. Seuls prérequis : cur
 Q : **Puis-je venir de manière ponctuelle ?** <br>
 A : Bien sûr ! Les Apéroots et certains ateliers sont ouverts à tou·tes.
 
-Q : **C’est légal ?** <br>
-A : Nous sommes rassemblés pour nous amuser certe, mais dans un cadre contrôllé. Tout ce qui est fait dans le cadre du Hackerspace respecte la loi. Le reste, *cela ne nous regarde pas* !
-
 Q : **Combien ça coûte ?** <br>
-A : **Le prix est libre** mais un **abonnement de 16€/mois** est recommandé. Notre trésorerie est transparente et ajustée collectivement lors des assemblées. L'adhésion ce fait par cooptation et/ou recommendation, **chaque adhésion est validée collectivement**.
+A : **Le prix est libre** mais un **abonnement de 16€/mois** est recommandé.
+
+Q : **Qui prend les décisions ?** <br>
+A : L'association fonctionne de manière collégiale, chaque décision est validée 
+**collectivement** par ces membres actifs, directement ou pendant les assemblées.
+
+Q : **C’est légal ?** <br>
+A : Tout ce qui est fait dans le cadre du lieu respecte la loi. 
+Le reste, *cela ne nous regarde pas* !
+
+<pre>
+
+        |\___/|
+        )     (             .              '
+       =\     /=
+         )===(       *
+        /     \
+       /       \
+       \       /
+_/\_/\_/\__  _/_/\_/\_/\_/\_/\_/\_/\_/\_/\_
+|  |  |  |( (  |  |  |  |  |  |  |  |  |  |
+|  |  |  | )_) |  |  |  |  |  |  |  |  |  |
+</pre>

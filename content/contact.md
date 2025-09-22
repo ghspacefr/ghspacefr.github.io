@@ -1,13 +1,26 @@
 ---
 title: Contact
-template: contact.html
 ---
+
+---
+
+Le local est situé **17 Rue du Pré Ruffier, 38400 Saint-Martin-d'Hères**<br>
+*Portes arrière premier étage, au fond à droite*
+
+---
+
+### Réseaux sociaux
+
+Vous pouvez nous contacter par email : [{{ site.email }}](mailto:{{ site.email }}), ou via :
+
+{% for item in site.links %}
+- {{ item.name }}: [{{ item.href }}]({{ item.href }}){% endfor %}
 
 ### Besoin de confidentialité ?
 
 Vous pouvez télécharger notre [clé publique](/static/pubkey.asc) ou la copier directement:
 
-<pre>
+<pre class="fg-4">
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 
 xjMEaEyFUBYJKwYBBAHaRw8BAQdAd23wI4tsbNVpbX9Plzcmp6XzyZWQKby/

@@ -1,33 +1,30 @@
-style: "/static/style.css"
-
 email: "team@ghspace.fr"
 
-social:
-  - name: Discord
-    url: "https://discord.com/invite/sfW7DrtREZ"
-  - name: Mastodon
-    url: "https://infosec.exchange/@ghspacefr"
-  - name: Linkedin
-    url: "https://linkedin.com/company/ghspacefr"
-
+style: "/static/css/light.css"
+   
 menu:
-
   - name: "[Home]"
     href: "/index.html"
-    
+
   - name: "[Blog]"
     href: "/blog.html"
 
-  - name: "[Contact]"
+  - name:  "[Contact]"
     href: "/contact.html"
-
+  
   - name: "[#]"
     class: "right"
-    onclick: "toggleScheme()"
+    onclick: "toggleColorScheme();"
     href: "#"
 
   - name: "[RSS]"
     class: "right"
     href: "#"
-
-address: "17 Rue du Pré Ruffier, 38400 Saint-Martin-d'Hères"
+     
+links:
+  - name: "Discord"
+    href: "https://discord.com/invite/sfW7DrtREZ"
+  - name: "Mastodon"
+    href: "https://infosec.exchange/@ghspacefr"
+  - name: "Linkedin"
+    href: "https://linkedin.com/company/ghspacefr"

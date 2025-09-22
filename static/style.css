@@ -2,8 +2,8 @@
 {
     color-scheme: light dark;
 
-    --fg-1: #000;
-    --fg-dark-1: #fff;
+    --fg-1: #003;
+    --fg-dark-1: #ccc;
 
     --fg-2: #0f0fef;
     --fg-dark-2: #2186d9;
@@ -13,6 +13,11 @@
 
     --bg-2: #ddd;
     --bg-dark-2: #222;	
+}
+
+[color-scheme="dark"]
+{
+	
 }
 
 body
