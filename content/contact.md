@@ -9,11 +9,13 @@ Le local est situé **17 Rue du Pré Ruffier, 38400 Saint-Martin-d'Hères**<br>
 
 ---
 
+
+Vous pouvez nous contacter par email : [{{ site.contact.email }}](mailto:{{ site.contact.email }}),<br>
+Ou via IRC <span class="fg-2">{{ site.contact.irc.channel }}</span> sur [{{ site.contact.irc.server }}](irc://{{ site.contact.irc.server }})
+
 ### Réseaux sociaux
 
-Vous pouvez nous contacter par email : [{{ site.email }}](mailto:{{ site.email }}), ou via :
-
-{% for item in site.links %}
+{% for item in site.contact.links %}
 - {{ item.name }}: [{{ item.href }}]({{ item.href }}){% endfor %}
 
 ### Besoin de confidentialité ?

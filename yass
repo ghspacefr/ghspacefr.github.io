@@ -6,6 +6,8 @@ import re
 import yaml
 import shutil
 
+import xml.etree.ElementTree as ET
+
 from datetime import datetime
 from markdown import markdown
 from collections import defaultdict
@@ -55,22 +57,17 @@ def get_config(path):
     with open(path, "r") as f:
         return yaml.safe_load(f.read())
 
-
-def build_pages():
+def build_pages(site, pages):
 
     print(f"[{datetime.now().isoformat()}] Building pages.....")
 
     if not os.path.exists(PUBLIC_DIR): os.makedirs(PUBLIC_DIR)
 
-    site = get_config(CONFIG_FILE)
-    site.update({ "last_update": datetime.now().isoformat() })
-
     env = Environment(loader=FileSystemLoader(TEMPLATE_DIR))
     env.filters["markdown"] = markdown
     
-    pages = get_pages(CONTENT_DIR)
-        
     for subdir, subpages in pages.items():
+ 
         for page in subpages:
         
             kwargs = { 
@@ -90,6 +87,31 @@ def build_pages():
             with open(path, 'w') as f:
                 f.write(html)
 
+def gen_sitemap(site, pages):
+    print(f"[{datetime.now().isoformat()}] Generating sitemap...")
+
+    urlset = ET.Element('urlset', xmlns="http://www.sitemaps.org/schemas/sitemap/0.9")
+
+    filename = site.get("sitemap", "sitemap.xml")
+    filepath = os.path.normpath(os.path.join(PUBLIC_DIR, filename))
+    
+    for subdir, subpages in pages.items():
+        for page in subpages:
+          url = os.path.normpath(os.path.join(site["url"], page['subpath']))
+          print(f"    {url}")
+          url_element = ET.SubElement(urlset, 'url')
+          loc = ET.SubElement(url_element, 'loc')
+          loc.text = url
+          lastmod = ET.SubElement(url_element, 'lastmod')
+          lastmod.text = datetime.now().strftime('%Y-%m-%d')
+          changefreq = ET.SubElement(url_element, 'changefreq')
+          changefreq.text = 'daily'
+          priority = ET.SubElement(url_element, 'priority')
+          priority.text = '0.8'
+
+    tree = ET.ElementTree(urlset)
+    tree.write(filepath, encoding='utf-8', xml_declaration=True)
+
 def copy_static():
     print(f"[{datetime.now().isoformat()}] Copying {STATIC_DIR} into {PUBLIC_DIR}...")
     shutil.copytree(STATIC_DIR,
@@ -97,9 +119,14 @@ def copy_static():
         dirs_exist_ok=True)
 
 if __name__ == "__main__":
+
+    pages = get_pages(CONTENT_DIR)
+    site = get_config(CONFIG_FILE)
+    site.update({ "last_update": datetime.now().isoformat() })
+
+    build_pages(site, pages)
+    gen_sitemap(site, pages)
     
-    build_pages()
     copy_static()
 
     print(f"[{datetime.now().isoformat()}] All Done!")
-
