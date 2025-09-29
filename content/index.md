@@ -9,7 +9,7 @@ title: Home
 {% for item in blog_posts[:3] %}
 - {{ item.last_update }}  [{{ item.title }}]({{ item.subpath }}){% endfor %}
 
-<h4 class="bg-2">A PROPOS</h4>
+<h4 class="bg-2">À PROPOS</h4>
 
 <pre>
   .       ____     .      . .            .   
@@ -28,7 +28,7 @@ WWWWWWWWWWWWWIIIIIIii;;::..;..;\WWWWWWWWIIII;::; :::::::::.....::       \
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%XXXXXXXXXX
 </pre>
 
-**GRENOBLE HACKERSPACE** est une association loi 1901, un tier-lieu et une communautée dédiée la promotion des arts, de l'expérimentation, l'informatique et la cybersécurité. L'association offre un espace de rencontre et de travail pour apprendre, bricoler, collaborer, détourner ensemble.
+**GRENOBLE HACKERSPACE** est une association loi 1901, un tier-lieu et une communauté dédiée à la promotion des arts, de l'expérimentation, l'informatique et la cybersécurité. L'association offre un espace de rencontre et de travail pour apprendre, bricoler, collaborer, détourner ensemble.
 
 <h4 class="bg-2">AGENDA</h4>
 
@@ -50,7 +50,7 @@ WWWWWWWWWWWWWIIIIIIii;;::..;..;\WWWWWWWWIIII;::; :::::::::.....::       \
 
 ---
 
-- **Où?**: Au local ([voir l'addresse](/contact.html))
+- **Où?**: Au local ([voir l'adresse](/contact.html))
 - **Quoi?**: Point hebdomadaire pour organiser la vie du lieu (projets, budget, etc.).
 - **Quand?**: Quand on peut, les jeudis, 18h30
 

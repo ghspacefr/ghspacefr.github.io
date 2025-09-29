@@ -122,11 +122,12 @@ if __name__ == "__main__":
 
     pages = get_pages(CONTENT_DIR)
     site = get_config(CONFIG_FILE)
+    
     site.update({ "last_update": datetime.now().isoformat() })
 
     build_pages(site, pages)
     gen_sitemap(site, pages)
-    
+        
     copy_static()
 
     print(f"[{datetime.now().isoformat()}] All Done!")
