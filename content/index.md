@@ -7,7 +7,7 @@ title: Home
 {% set blog_posts = pages["blog"] | sort(attribute='last_update', reverse=True) %}
 
 {% for item in blog_posts[:3] if not item.subpath.endswith('index.html') %}
-- {{ item.last_update }}  [{{ item.title }}](/{{ item.subpath }}){% endfor %}
+- {{ item.last_update }} [{{ item.title }}](/{{ item.subpath }}){% endfor %}
 
 <h4 class="bg-2">À PROPOS</h4>
 
