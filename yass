@@ -44,7 +44,7 @@ def get_pages(path):
                 page, content = parse_content(f.read())
                 page["filename"] = filename
                 page["subpath"] = os.path.join(subdir, filename.replace(".md", ".html"))
-                print(page["subpath"])
+                # print(page["subpath"])
                 page["content"] = content
                 page.setdefault("last_update", datetime.now().isoformat())
                 page.setdefault("template", "base.html")
@@ -54,7 +54,7 @@ def get_pages(path):
 def render_content(env, content, kwargs):
     t = Template(content)
     t.environment.globals = env.globals
-    t.environment.filters = env.filters
+    t.environment.filters["format_size"] = format_size
     return t.render(**kwargs)
     
 def render_page(page, env, kwargs):
