@@ -11,7 +11,7 @@ import xml.etree.ElementTree as ET
 from datetime import datetime
 from markdown import markdown
 from collections import defaultdict
-from jinja2 import Environment, FileSystemLoader, Template
+from jinja2 import Environment, FileSystemLoader
 
 CONTENT_DIR         = os.environ.get('CONTENT_DIR', 'content')
 TEMPLATE_DIR        = os.environ.get('TEMPLATE_DIR', 'template')
@@ -52,9 +52,7 @@ def get_pages(path):
     return pages
 
 def render_content(env, content, kwargs):
-    t = Template(content)
-    t.environment.globals = env.globals
-    t.environment.filters["format_size"] = format_size
+    t = env.from_string(content)
     return t.render(**kwargs)
     
 def render_page(page, env, kwargs):
