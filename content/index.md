@@ -6,8 +6,8 @@ title: Home
 
 {% set blog_posts = pages["blog"] | sort(attribute='last_update', reverse=True) %}
 
-{% for item in blog_posts[:3] %}
-- {{ item.last_update }}  [{{ item.title }}]({{ item.subpath }}){% endfor %}
+{% for item in blog_posts[:3] if not item.subpath.endswith('index.html') %}
+- {{ item.last_update }}  [{{ item.title }}](/{{ item.subpath }}){% endfor %}
 
 <h4 class="bg-2">À PROPOS</h4>
 
@@ -70,12 +70,10 @@ Q : **Combien ça coûte ?** <br>
 A : **Le prix est libre** mais un **abonnement de 16€/mois** est recommandé.
 
 Q : **Qui prend les décisions ?** <br>
-A : L'association fonctionne de manière collégiale, chaque décision est validée 
-**collectivement** par ces membres actifs, directement ou pendant les assemblées.
+A : Chaque décision est validée **collectivement** par ces membres actifs, directement ou pendant les assemblées.
 
 Q : **C’est légal ?** <br>
-A : Tout ce qui est fait dans le cadre du lieu respecte la loi. 
-Le reste, *cela ne nous regarde pas* !
+A : Tout ce qui est fait dans le cadre du lieu respecte la loi. Le reste, *cela ne nous regarde pas* !
 
 <pre>
 

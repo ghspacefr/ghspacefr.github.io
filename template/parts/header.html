@@ -9,7 +9,7 @@ GRENOBLE HACKERSPACE
 	{% for item in site.menu %}
 		<li><a {% if item.class is defined %}class="{{ item.class}}"{% endif %}
 		       {% if item.onclick is defined %}onclick="{{ item.onclick }}"{% endif %} 
-		       href="{{ item.href }}">{{ item.name }}</a></li>
+		       href="{{ item.href }}">[{{ item.name }}]</a></li>
 	{% endfor %}
 	</ul>
 </nav>

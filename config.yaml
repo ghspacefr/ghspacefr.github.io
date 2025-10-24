@@ -1,21 +1,21 @@
 style: "/static/css/style.css"
    
 menu:
-  - name: "[Home]"
+  - name: "Home"
     href: "/index.html"
 
-  - name: "[Blog]"
-    href: "/blog.html"
+  - name: "Blog"
+    href: "/blog/index.html"
 
-  - name:  "[Contact]"
+  - name:  "Contact"
     href: "/contact.html"
   
-  - name: "[#]"
+  - name: "#"
     class: "right"
     onclick: "toggleColorScheme();"
     href: "#"
 
-  - name: "[RSS]"
+  - name: "RSS"
     class: "right"
     href: "#"
      
@@ -32,4 +32,4 @@ contact:
     - name: "Mastodon"
       href: "https://infosec.exchange/@ghspacefr"
 
-url: "https://ghspace.fr"
+url: "https://ghspace.fr/"
