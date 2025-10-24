@@ -46,7 +46,7 @@ def get_pages(path):
                 page["subpath"] = os.path.join(subdir, filename.replace(".md", ".html"))
                 # print(page["subpath"])
                 page["content"] = content
-                page.setdefault("last_update", datetime.now().isoformat())
+                page.setdefault("last_update", datetime.now().strftime("%Y-%m-%d %H:%M"))
                 page.setdefault("template", "base.html")
                 pages[subdir].append(page)
     return pages
@@ -130,7 +130,7 @@ if __name__ == "__main__":
 
     pages = get_pages(CONTENT_DIR)
     site = get_config(CONFIG_FILE)
-    site.update({ "last_update": datetime.now().isoformat() })
+    site.update({ "last_update": datetime.now().strftime("%Y-%m-%d %H:%M") })
 
     build_pages(site, pages)
     gen_sitemap(site, pages)
