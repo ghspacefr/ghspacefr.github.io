@@ -1,7 +1,8 @@
 {% extends 'base.html' %}
 {% block content%}
 <h2>{{ page.title | safe }}</h2>
-<p>{{ page.last_update }}</p>
+<span>{{ page.last_update }}</span><br><br>
+<a href="."><< Retour</a>
 {{ page.content | markdown | safe }}
-<a href="/blog.html"><< Retour</a>
+<a href="."><< Retour</a>
 {% endblock %}

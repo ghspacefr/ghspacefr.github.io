@@ -7,8 +7,8 @@ menu:
   - name: "Blog"
     href: "/blog/index.html"
 
-  - name:  "eZine"
-    href: "/eZine.html"
+  - name:  "Zine"
+    href: "/zine/index.html"
 
   - name:  "Contact"
     href: "/contact.html"
@@ -35,4 +35,4 @@ contact:
     - name: "Mastodon"
       href: "https://infosec.exchange/@ghspacefr"
 
-url: "https://ghspace.fr/"
+url: "https://ghspace.fr"

@@ -1,5 +1,7 @@
 ---
-title: "9600 Bauds #1 est enfin sorti !"
+title: "[9600] 9600 Bauds est sorti!"
+last_update: 2025-10-24 13:00
+template: post.html
 ---
 
 <pre>
@@ -37,4 +39,4 @@ title: "9600 Bauds #1 est enfin sorti !"
 Un immense merci à celleux qui ont contribués dès le début, ou à la dernière minute ;)
 
 - [https://infosec.exchange/@ghspacefr/115428775437564806](https://infosec.exchange/@ghspacefr/115428775437564806)
-- [https://ghspace.fr/eZine.html](https://ghspace.fr/eZine.html)
+- [{{ site.url }}/zine/9600bauds01]({{ site.url }}/zine/9600bauds01)

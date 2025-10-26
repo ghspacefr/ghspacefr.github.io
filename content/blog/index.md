@@ -6,3 +6,5 @@ title: Blog
 
 {% for item in blog_posts if not item.subpath.endswith('index.html') %}
 - {{ item.last_update }} [{{ item.title }}](/{{ item.subpath }}){% endfor %}
+
+[<< Retour](..)

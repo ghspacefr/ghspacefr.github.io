@@ -1,6 +1,5 @@
 ---
-title: "Hello World"
-url: blog/hello-world.html
+title: "[News] Hello World"
 last_update: 2025-05-08 12:55
 template: post.html
 ---
