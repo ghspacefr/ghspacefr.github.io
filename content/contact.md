@@ -4,6 +4,8 @@ title: Contact
 
 ---
 
+![](/static/satellite.png)
+
 Le local est situé **17 Rue du Pré Ruffier, 38400 Saint-Martin-d'Hères**<br>
 *Portes arrière premier étage, au fond à droite*
 
