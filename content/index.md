@@ -32,7 +32,7 @@ Q : **Combien ça coûte ?** <br>
 A : **Le prix est libre** mais un **abonnement de 16€/mois** est recommandé.
 
 Q : **Qui prend les décisions ?** <br>
-A : Chaque décision est validée **collectivement** par ses membres actifs, directement ou pendant les assemblées.
+A : Chaque décision est validée **collectivement** par ses adhérents, directement ou pendant les assemblées.
 
 Q : **C’est légal ?** <br>
 A : Tout ce qui est fait dans le cadre du lieu respecte la loi. Le reste, *cela ne nous regarde pas* !
