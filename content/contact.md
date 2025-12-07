@@ -2,29 +2,30 @@
 title: Contact
 ---
 
----
+<iframe width="100%" height="320" src="https://www.openstreetmap.org/export/embed.html?bbox=5.747566223144532%2C45.16799949425292%2C5.756524801254273%2C45.17133140735505&amp;layer=mapnik&amp;marker=45.16966358418424%2C5.752045512199402" style="margin-top: 1rem; border: 1px solid black"></iframe>
+<small><a href="https://www.openstreetmap.org/?mlat=45.169664&amp;mlon=5.752046#map=18/45.169665/5.752046&amp;layers=N">View Larger Map</a></small>
 
-![](/static/satellite.png)
+---
 
 Le local est situé **17 Rue du Pré Ruffier, 38400 Saint-Martin-d'Hères**<br>
 *Portes arrière premier étage, au fond à droite*
 
 ---
 
+Vous pouvez nous contacter par email : [team@ghspace.fr](mailto:team@ghspace.fr),<br>
+Ou via IRC [#ghspacefr]() sur [irc.libera.chat:6697](irc://irc.libera.chat:6697)
 
-Vous pouvez nous contacter par email : [{{ site.contact.email }}](mailto:{{ site.contact.email }}),<br>
-Ou via IRC <span class="fg-2">{{ site.contact.irc.channel }}</span> sur [{{ site.contact.irc.server }}](irc://{{ site.contact.irc.server }})
+#### Réseaux sociaux
 
-### Réseaux sociaux
+- Matrix: [https://matrix.to/#/#ghspacefr:matrix.org](https://matrix.to/#/#ghspacefr:matrix.org)
+- Discord: [https://discord.com/invite/sfW7DrtREZ](https://discord.com/invite/sfW7DrtREZ)
+- Mastodon: [https://infosec.exchange/@ghspacefr](https://infosec.exchange/@ghspacefr)
 
-{% for item in site.contact.links %}
-- {{ item.name }}: [{{ item.href }}]({{ item.href }}){% endfor %}
+#### Besoin de confidentialité ?
 
-### Besoin de confidentialité ?
+Vous pouvez télécharger notre [clé publique](https://ghspace.fr/static/pubkey.asc) ou la copier directement:
 
-Vous pouvez télécharger notre [clé publique](/static/pubkey.asc) ou la copier directement:
-
-<pre class="fg-4">
+```{ .pem .fg-4 }
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 
 xjMEaEyFUBYJKwYBBAHaRw8BAQdAd23wI4tsbNVpbX9Plzcmp6XzyZWQKby/
@@ -39,4 +40,4 @@ ENXPPXnF5Xg4FiEEgd7FwoZY306N/DDc1c89ecXleDjYSgD+MoffrjJDWZD+
 6xaiSXMYB+QiEsYB
 =K0Dl
 -----END PGP PUBLIC KEY BLOCK-----
-</pre>
+```

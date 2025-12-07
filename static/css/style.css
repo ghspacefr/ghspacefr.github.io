@@ -68,3 +68,8 @@ a
 {
 	* { font-size: 0.9em; }
 }
+
+.mapouter 
+{
+	width: 100%;
+}

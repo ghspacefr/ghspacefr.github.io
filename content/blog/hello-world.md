@@ -1,17 +1,17 @@
 ---
-title: "[News] Hello World"
-last_update: 2025-05-08 12:55
+title: '[News] Hello World'
+last_update: 2025-05-08 18:35
 template: post.html
 ---
 
-<pre>
+```
 ░▒█░▒█░█▀▀░█░░█░░▄▀▀▄░░░▒█░░▒█░▄▀▀▄░█▀▀▄░█░░█▀▄
 ░▒█▀▀█░█▀▀░█░░█░░█░░█░░░▒█▒█▒█░█░░█░█▄▄▀░█░░█░█
 ░▒█░▒█░▀▀▀░▀▀░▀▀░░▀▀░░░░▒▀▄▀▄▀░░▀▀░░▀░▀▀░▀▀░▀▀░
-</pre>
+```
 
 J'ai le plaisir de vous annoncer la création de l'association par l'assemblée constitutive ce 8 mai au Tonneau de Diogène 6 Place Notre-dame, Grenoble, FR 38000
 
 *"Do what you want 'cause a pirate is free, you are a pirate !"*
 
-Pour rappel, le hackerspace repose sur le partage gratuit, libre et non faussé du savoir-faire et de l'information. Notre objectif est de créer un espace pour apprendre les uns des autres, collaborer, détourner mais surtout, s'amuser. Nous sommes une communauté de professionnels, de passionnés, de curieux et de créateurs revendiquant une identité/culture propre et [Underground](#).
+Pour rappel, le hackerspace repose sur le partage gratuit, libre et non faussé du savoir-faire et de l'information.Notre objectif est de créer un espace pour apprendre les uns des autres, collaborer, détourner mais surtout, s'amuser. Nous sommes une communauté de professionnels, de passionnés, de curieux et de créateurs revendiquant une identité/culture propre et [Underground](https://en.wikipedia.org/wiki/Hacker_culture).

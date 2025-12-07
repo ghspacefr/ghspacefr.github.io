@@ -39,11 +39,12 @@ jobs:
 
       - name: Install dependencies
         run: |
+          apt get install make
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
       - name: Build the website
-        run: python yass
+        run: make build
 
       - name: Setup Pages
         uses: actions/configure-pages@v5

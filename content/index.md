@@ -1,64 +1,24 @@
 ---
-title: Home
+title: Maison
 ---
 
-<h4 class="bg-2">ACTUALITÉ</h4>
+#### A PROPOS {: .bg-2 }
 
-{% set blog_posts = pages["blog"] | sort(attribute='last_update', reverse=True) %}
-
-{% for item in blog_posts[:3] if not item.subpath.endswith('index.html') %}
-- {{ item.last_update }} [{{ item.title }}](/{{ item.subpath }}){% endfor %}
-
-<h4 class="bg-2">À PROPOS</h4>
-
-<pre>
-  .       ____     .      . .            .   
-         >>         .        .               .
- .   .  /WWWI; \  .       .    .  ____               .         .     .         
-  *    /WWWWII; \=====;    .     /WI; \   *    .        /\_             .
-  .   /WWWWWII;..      \_  . ___/WI;:. \     .        _/M; \    .   .         .
-     /WWWWWIIIIi;..      \__/WWWIIII:.. \____ .   .  /MMI:  \   * .
- . _/WWWWWIIIi;;;:...:   ;\WWWWWWIIIII;.     \     /MMWII;   \    .  .     .
-  /WWWWWIWIiii;;;.:.. :   ;\WWWWWIII;;;::     \___/MMWIIII;   \              .
- /WWWWWIIIIiii;;::.... :   ;|WWWWWWII;;::.:      :;IMWIIIII;:   \___     *
-/WWWWWWWWWIIIIIWIIii;;::;..;\WWWWWWIII;;;:::...    ;IMIII;;     ::  \     .
-WWWWWWWWWIIIIIIIIIii;;::.;..;\WWWWWWWWIIIII;;..  :;IMIII;:::     :    \   
-WWWWWWWWWWWWWIIIIIIii;;::..;..;\WWWWWWWWIIII;::; :::::::::.....::       \
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%XXXXXXX
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%XXXXXXXXXX
-</pre>
+![Les bulles!](/static/img/bulles.png)
 
 **GRENOBLE HACKERSPACE** est une association loi 1901, un tier-lieu et une communauté dédiée à la promotion des arts, de l'expérimentation, l'informatique et la cybersécurité. L'association offre un espace de rencontre et de travail pour apprendre, bricoler, collaborer, détourner ensemble.
 
-<h4 class="bg-2">AGENDA</h4>
+#### HACKERSPACE ? {: .bg-2 }
 
-### Les trucs récurrents
+Un **hackerspace** (ou hacklab) est un tiers-lieu dans lequel des personnes partageant
+un intérêt commun (souvent autour de l'informatique, de la technologie, des 
+sciences, des arts) se rencontrent et collaborent ensemble. Les hackerspaces 
+peuvent être vus comme des laboratoires communautaires ouverts où les hackers
+peuvent partager leurs ressources et leurs connaissances. 
 
----
+\> [https://fr.wikipedia.org/wiki/Hackerspace](https://fr.wikipedia.org/wiki/Hackerspace)
 
-**Apéroot**
-
----
-
-- **Où?**: Au **Tonneau de Diogène, 38100 Grenoble**
-- **Quoi?**: Apéro convivial pour rencontrer la communauté autour d’un verre.
-- **Quand?**: 1er jeudi du mois, 18h30
-
----
-
-**Assemblées Générales**
-
----
-
-- **Où?**: Au local ([voir l'adresse](/contact.html))
-- **Quoi?**: Point hebdomadaire pour organiser la vie du lieu (projets, budget, etc.).
-- **Quand?**: Quand on peut, les jeudis, 18h30
-
----
-
-**GRENOBLE HACKERSPACE** participe à d'autres événements, n'hésitez pas à [nous suivre](/contact.html) pour nous retrouver
-
-<h4 class="bg-2">FAQ</h4>
+#### FAQ {: .bg-2 }
 
 Q : **Faut-il être expert·e pour venir ?** <br>
 A : Non ! L’idée est justement d’apprendre ensemble. Seuls prérequis : curiosité et respect du lieu.

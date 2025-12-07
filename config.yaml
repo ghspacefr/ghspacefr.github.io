@@ -1,38 +1,16 @@
-style: "/static/css/style.css"
-   
+
 menu:
-  - name: "Home"
-    href: "/index.html"
-
+  - name: "Maison" 
+    url: /index.html
   - name: "Blog"
-    href: "/blog/index.html"
+    url: /blog/index.html
+  - name: "Adhésions"
+    url: /dons.html
+  - name: "Copaines"
+    url: /copaines.html
+  - name: "Contact"
+    url: /contact.html
+    
+style: /static/css/style.css
 
-  - name:  "Zine"
-    href: "/zine/index.html"
-
-  - name:  "Contact"
-    href: "/contact.html"
-
-  - name: "#"
-    class: "right"
-    onclick: "toggleColorScheme();"
-    href: "#"
-
-  - name: "RSS"
-    class: "right"
-    href: "#"
-     
-contact:
-  email: "team@ghspace.fr"
-  irc:
-    server: "irc.libera.chat:6697"
-    channel: "#ghspacefr"
-  links:
-    - name: "Matrix"
-      href: "https://matrix.to/#/#ghspacefr:matrix.org"
-    - name: "Discord"
-      href: "https://discord.com/invite/sfW7DrtREZ"
-    - name: "Mastodon"
-      href: "https://infosec.exchange/@ghspacefr"
-
-url: "https://ghspace.fr"
+email: team@ghspace.fr

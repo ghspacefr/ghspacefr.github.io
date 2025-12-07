@@ -1,26 +1,31 @@
 <!DOCTYPE html>
 <html class="dark">
-<head>
-	<meta charset="utf-8" />
-	<link rel="stylesheet" type="text/css" href="{{ site.style }}" />
-	<title>{{ page.title | safe }}</title>
-</head>
-<body>
-	<br>
-	<header>{% block header %}
-	{% include "parts/header.html" %}
-	{% endblock %}</header>
-	<div id="content">{% block content %}	
-	{% if page.title %}
-	<h2>{{ page.title | safe }}</h2>
-	{% endif%}
-	{{ page.content | markdown | safe }}
-	{% endblock %}</div>
-	<footer>{% block footer %}
-	{% include "parts/footer.html" %}
-	{% endblock %}</footer>
-	<br>
-</body>
+	<head>
+		<link rel="stylesheet" type="text/css" href="{{ site.style }}" />
+		<meta charset="utf-8" />
+	</head>
+	<body>
+	<header>	
+<pre>
+      |\__/ | (`\
+    _.|o o  |_ ) )
+---(((---(((--------
+GRENOBLE HACKERSPACE
+</pre>
+		<p>
+			<a href="#" onclick="toggleColorScheme();" class="right">[#]</a>
+			{% for item in site.menu %}
+				<a href="{{ item.url }}" class="{{ item.class | default('') }}">[{{item.name}}]</a>
+			{% endfor %}		
+		</p>
+</header>
+<div id="content">
+<strong>{{ page.url }}</strong>
+{% block content %}{{ page.content | markdown }}{% endblock %}
+<footer>
+	<p>Licensed CC BY-NC-SA 4.0 <a href="mailto:{{ site.email }}">{{ site.email }}</a> build {{ now() }}</p>
+	<center class="bg-gray">-- EOF --</center>
+</footer><br>
 <script>
 function getColorScheme()
 {
@@ -37,4 +42,5 @@ function toggleColorScheme()
 { setColorScheme(getColorScheme()==='dark' ? 'light' : 'dark'); }
 setColorScheme(getColorScheme());
 </script>
+</body>
 </html>

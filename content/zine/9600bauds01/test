@@ -1,3 +1,0 @@
-for file in {00..06} README; do
-  echo -e "---\ntitle: ${file}.txt\ntemplate: post.html\n---\n<pre>\n$(cat "${file}.txt")\n</pre>" > ${file}.md
-done

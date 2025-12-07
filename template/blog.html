@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% set posts = pages | selectattr('template', 'equalto', 'post.html') %}
+
+{% block content %}
+{{ page.content | markdown }}
+<ul>{% for post in posts | sort(attribute='last_update', reverse=True) %}
+	<li><span>{{ post.last_update }}&nbsp;</span><a href="/{{ post.url }}">{{ post.title }}</a></li>
+{% endfor %}</ul>
+{% endblock %}
