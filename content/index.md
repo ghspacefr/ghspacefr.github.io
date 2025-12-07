@@ -6,7 +6,9 @@ title: Maison
 
 ![Les bulles!](/static/img/bulles.png)
 
-**GRENOBLE HACKERSPACE** est une association loi 1901, un tier-lieu et une communauté dédiée à la promotion des arts, de l'expérimentation, l'informatique et la cybersécurité. L'association offre un espace de rencontre et de travail pour apprendre, bricoler, collaborer, détourner ensemble.
+**GRENOBLE HACKERSPACE** est une association loi 1901, un tier-lieu et une communauté dédiée à la promotion 
+des arts, de l'expérimentation, de l'informatique et de la cybersécurité. 
+L'association offre un espace de rencontre et de travail pour apprendre, bricoler, collaborer, détourner ensemble.
 
 #### HACKERSPACE ? {: .bg-2 }
 
@@ -21,7 +23,7 @@ peuvent partager leurs ressources et leurs connaissances.
 #### FAQ {: .bg-2 }
 
 Q : **Faut-il être expert·e pour venir ?** <br>
-A : Non ! L’idée est justement d’apprendre ensemble. Seuls prérequis : curiosité et respect du lieu.
+A : Non ! L’idée est justement d’apprendre ensemble. Seuls prérequis : curiosité.
 
 Q : **Puis-je venir de manière ponctuelle ?** <br>
 A : Bien sûr ! Les Apéroots et certains ateliers sont ouverts à tou·tes.
@@ -30,7 +32,7 @@ Q : **Combien ça coûte ?** <br>
 A : **Le prix est libre** mais un **abonnement de 16€/mois** est recommandé.
 
 Q : **Qui prend les décisions ?** <br>
-A : Chaque décision est validée **collectivement** par ces membres actifs, directement ou pendant les assemblées.
+A : Chaque décision est validée **collectivement** par ses membres actifs, directement ou pendant les assemblées.
 
 Q : **C’est légal ?** <br>
 A : Tout ce qui est fait dans le cadre du lieu respecte la loi. Le reste, *cela ne nous regarde pas* !
