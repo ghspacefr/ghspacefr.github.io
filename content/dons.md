@@ -11,8 +11,8 @@ akg\(_)_]]      /  |  \                            *   *  .   .
                                                      '   *
 ```
 
-**GRENOBLE HACKERSPACE** est un espace autogéré, avec des outils et des moyens de productions mis en communs.
-Notre motivation est simple, vous founir les outils et les compétences pour expérimenter et vous approprier l'informatique.
+**GRENOBLE HACKERSPACE** est un espace autogéré, avec des outils mis en communs.
+Notre motivation est simple, vous founir les moyens et les compétences pour expérimenter et vous approprier l'informatique.
 
 Votre contribution *(financière ou non)* est donc vitale à la vie du lieu.<br>
 Vous pouvez **faire un don** de manière ponctuelle ou **adhérer** à l'association pour un accès libre.
@@ -38,5 +38,4 @@ Votre contribution servira à :
 - Approvisionner l'espace d'outils, fournitures électroniques et équipement de base pour ses adhérents.
 - **Créer les conditions de sécurité** avec des équipements de premiers secours, du matériel de sécurité incendie et 
 une zones de travail (à peu près) bien organisée.
-- **Couvrir les dépenses opérationnelles** - services publics, assurance et autres exigences similaires.
-- **Nous aider** à organiser des portes ouvertes, des ateliers et d'autres événements d'ouverture.
+- **Couvrir les dépenses opérationnelles** - services publics, loyer, assurance et autres exigences similaires.
