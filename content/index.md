@@ -10,7 +10,7 @@ title: Maison
 des arts, de l'expérimentation, de l'informatique et de la cybersécurité. 
 L'association offre un espace de rencontre et de travail pour apprendre, bricoler, collaborer, détourner ensemble.
 
-#### HACKERSPACE ? {: .bg-2 }
+#### HACKERSPACE? {: .bg-2 }
 
 Un **hackerspace** (ou hacklab) est un tiers-lieu dans lequel des personnes partageant
 un intérêt commun (souvent autour de l'informatique, de la technologie, des 

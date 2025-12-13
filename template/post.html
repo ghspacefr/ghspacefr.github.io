@@ -1,6 +1,6 @@
 {% extends 'base.html'%}
 {% block content %}
-<h2>{{ page.title }}</h2>
+<h2>{{ page.title }}</h2><span>{{ page.last_update }}</span><br><br>
 <a href="#" onclick="history.back()" ><< Retour</a>
 {{ page.content | markdown }}
 <a href="#" onclick="history.back()" ><< Retour</a>
