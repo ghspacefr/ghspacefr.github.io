@@ -14,6 +14,7 @@ title: Nos copaines
 - [Sophia Hacklab](https://www.shl.contact/)
 - [Fluidspace](https://www.fluidspace.org/)
 - [Interhack](https://interhacker.space/)
+- [HackGyver](https://hackgyver.fr/)
 
 #### À L'INTERNATIONAL {: .bg-2 }
 
