@@ -18,7 +18,7 @@ Ou via IRC [#ghspacefr]() sur [irc.libera.chat:6697](irc://irc.libera.chat:6697)
 #### Réseaux sociaux
 
 - Matrix: [https://matrix.to/#/#ghspacefr:matrix.org](https://matrix.to/#/#ghspacefr:matrix.org)
-- Discord: [https://discord.com/invite/sfW7DrtREZ](https://discord.com/invite/sfW7DrtREZ)
+- Discord: [https://discord.com/invite/Fk5nXf7BjY](https://discord.com/invite/Fk5nXf7BjY)
 - Mastodon: [https://infosec.exchange/@ghspacefr](https://infosec.exchange/@ghspacefr)
 
 #### Besoin de confidentialité ?
