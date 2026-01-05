@@ -5,8 +5,8 @@ clean:
 	
 build:
 	mkdir -p public
-	cp -rf static public/static/
 	python app.py
+	cp -rf static public/static/
 
 run: build
 	python -m http.server -d public

@@ -7,6 +7,8 @@ from datetime import datetime
 from markdown import markdown
 from jinja2 import Environment, FileSystemLoader
 
+from scripts.generate_index_pages import generate_index_pages_for_directory
+
 CONTENT_DIR         = os.environ.get('CONTENT_DIR', 'content')
 TEMPLATE_DIR        = os.environ.get('TEMPLATE_DIR', 'template')
 PUBLIC_DIR          = os.environ.get('PUBLIC_DIR', 'public')
@@ -68,5 +70,7 @@ def main():
 
         fwrite(path, html)
         print(f"{path}")
+
+    generate_index_pages_for_directory(STATIC_DIR)
 
 main()
