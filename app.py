@@ -31,7 +31,7 @@ def fm_load(path: str) -> dict:
         fm_dict = yaml.safe_load(fm_content)
         fm_dict.setdefault("template", BASE_TEMPLATE)
         fm_dict.setdefault("last_update", datetime.fromtimestamp(
-            os.path.getmtime(path)).strftime('%Y-%m-%d %H:%M:%S'))
+            os.path.getmtime(path)).strftime('%Y-%m-%d %H:%M'))
         fm_dict["content"] = content[match.end():] 
         fm_dict["url"] = os.path.normpath(
             os.path.relpath(path.replace(".md", ".html"), CONTENT_DIR))
