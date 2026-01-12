@@ -8,10 +8,10 @@ title: Nos copaines
 - [Grésille](https://www.gresille.org/)
 - [Adri38](https://www.adri38.fr/)
 - [Sécurimag](https://securimag.org/)
+- [Aconit](https://aconit.org/spip/)
   
 #### EN FRANCE {: .bg-2 }
 
-- [Sophia Hacklab](https://www.shl.contact/)
 - [Fluidspace](https://www.fluidspace.org/)
 - [Interhack](https://interhacker.space/)
 - [HackGyver](https://hackgyver.fr/)

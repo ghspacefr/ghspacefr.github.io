@@ -22,13 +22,16 @@ Vous pouvez **faire un don** de manière ponctuelle ou **adhérer** à l'associa
 
 #### COMBIEN ÇA COÛTE?  {: .bg-2 }
 
-Le budget actuel est fixé à 16.000€ par an pour couvrir les coûts essentiels, le local et les charges.
+Le budget actuel est fixé à 16.000€ par an pour couvrir les coûts essentiels, le local et les charges.<br>
+L'adhésion est à prix libre mais l'équivalent de 16€ par mois est recommandé.
 
 #### COMMENT FAIRE? {: .bg-2 }
 
 Vous pouvez contribuer par votre travail ou directement sur la plateforme [HelloAsso](https://www.helloasso.com/associations/grenoble-hackerspace/formulaires/1).
 Nous organisons régulièrement des campagnes de récupération de fournitures, de matériel informatique ou électronique et de laboratoire.
 L'association propose aussi certains services à prix libre ou négocié pour les professionnels et particuliers.
+
+\> [Nous contacter](/contact.html)
 
 #### À QUOI ÇA SERT? {: .bg-2 }
 

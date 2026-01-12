@@ -4,11 +4,11 @@ title: Maison
 
 #### A PROPOS {: .bg-2 }
 
-![Les bulles!](/static/img/bulles.png)
-
 **GRENOBLE HACKERSPACE** est une association loi 1901, un tiers-lieu et une communauté dédiée à la promotion 
 des arts, de l'expérimentation, de l'informatique et de la cybersécurité. 
 L'association offre un espace de rencontre et de travail pour apprendre, bricoler, collaborer, détourner ensemble.
+
+\> [Voir les status](/static/misc/status.pdf)
 
 #### HACKERSPACE? {: .bg-2 }
 
