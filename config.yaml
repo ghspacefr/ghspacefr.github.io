@@ -1,4 +1,6 @@
 
+url: "https://ghspace.fr"
+
 menu:
   - name: "Maison" 
     url: /index.html
@@ -10,7 +12,10 @@ menu:
     url: /copaines.html
   - name: "Contact"
     url: /contact.html
-    
-style: /static/css/style.css
+  - name: "RSS"
+    class: right
+    url: /rss.xml
 
+style: /static/css/style.css
 email: team@ghspace.fr
+feed: rss.xml

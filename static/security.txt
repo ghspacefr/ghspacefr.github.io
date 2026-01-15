@@ -1,0 +1,22 @@
+.oPYo.  o    o .oPYo.  .oPYo.      .oo .oPYo. .oPYo.     ooooo  .oPYo. 
+8    8  8    8 8       8    8     .P 8 8    8 8.         8      8   `8 
+8      o8oooo8 `Yooo. o8YooP'    .P  8 8      `boo      o8oo   o8YooP' 
+8   oo  8    8     `8  8        oPooo8 8      .P         8      8   `b 
+8    8  8    8      8  8       .P    8 8    8 8          8      8    8 
+`YooP8  8    8 `YooP'  8      .P     8 `YooP' `YooP' 88  8      8    8 
+:....8 :..:::..:.....::..:::::..:::::..:.....::.....:..::..:::::..:::..
+:::::8 ::::::::::::::::::::::::::::::::::::::::::::: security.txt :::::
+:::::..::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+Welcome aboard!
+
+We appreciate your efforts in helping us secure our systems. 
+If you find any vulnerabilitie, please contact us at ;
+
+Contact: mailto:admin@ghspace.fr
+Expires: 2027-12-30T23:00:00.000Z
+Encryption: https://ghspace.fr/static/pubkey.asc
+Preferred-Languages: en,fr
+Canonical: https://ghspace.fr/static/security.txt
+
+Happy Hacking ;)
